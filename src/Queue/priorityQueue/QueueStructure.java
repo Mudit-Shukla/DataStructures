@@ -33,6 +33,17 @@ public class QueueStructure<E> {
         }
     }
 
+    public void peek(){
+        System.out.println("data " + head.data + " priority : " + head.priority);
+    }
+
+    public void deQueue(){
+        Node<E> temp = head;
+        while(temp.next != null)
+            temp = temp.next;
+        temp.next = null;
+    }
+
 
     public void display(){
         if(head == null){
