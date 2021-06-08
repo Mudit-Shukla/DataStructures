@@ -15,6 +15,6 @@ public class Node<E> {
     public Node(E data, int priority) {
         this.data = data;
         this.priority = priority;
-        this.next = null;
+        next = null;
     }
 }

@@ -16,6 +16,7 @@ public class CircularLinkedList {
         if(head == null){
             head = new Node(data);
             tail = head;
+            tail.next = head;
             System.out.println("value inserted at first");
         }else{
             Node newNode = new Node(data);
@@ -31,9 +32,9 @@ public class CircularLinkedList {
             insertAtBeginning(data);
         else{
             Node newNode = new Node(data);
-            newNode.next = tail.next;
             tail.next = newNode;
             tail = newNode;
+            tail.next = head;
             System.out.println("value inserted at last");
         }
     }

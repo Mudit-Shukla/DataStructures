@@ -8,7 +8,7 @@
 package Queue.ImplementationUsingArray;
 
 public class QueueStructure {
-    int front = 0;
+    int front = -1;
     int tail = -1;
     int[] arr;
 
@@ -19,7 +19,8 @@ public class QueueStructure {
     boolean enQueue(int data) {
         if (tail == -1) {
             tail ++;
-            arr[front] = data;
+            front ++;
+            arr[tail] = data;
             return true;
         }else if(tail < arr.length){
             tail ++;
@@ -30,7 +31,7 @@ public class QueueStructure {
     }
 
     boolean deQueue(){
-        if(front == -1)
+        if(front >= tail)
             return false;
         else
             front ++;

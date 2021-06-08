@@ -2,7 +2,7 @@
  *   Author: Mudit Shukla
  *   Date: 27-02-2021
  *   Time: 20:05
- *   File: Main.java
+ *   File: graphs.Main.java
  */
 
 package lists.SinglyLinkedlList;

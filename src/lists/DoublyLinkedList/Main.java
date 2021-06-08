@@ -2,7 +2,7 @@
  *   Author: Mudit Shukla
  *   Date: 28-02-2021
  *   Time: 00:47
- *   File: Main.java
+ *   File: graphs.Main.java
  */
 
 package lists.DoublyLinkedList;

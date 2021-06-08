@@ -2,7 +2,7 @@
  *   Author: Mudit Shukla
  *   Date: 27-02-2021
  *   Time: 12:16
- *   File: Main.java
+ *   File: graphs.Main.java
  */
 
 package Queue.ImplementationUsingArray;

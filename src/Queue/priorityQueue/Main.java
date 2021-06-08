@@ -2,7 +2,7 @@
  *   Author: Mudit Shukla
  *   Date: 06-03-2021
  *   Time: 03:02
- *   File: Main.java
+ *   File: graphs.Main.java
  */
 
 package Queue.priorityQueue;
