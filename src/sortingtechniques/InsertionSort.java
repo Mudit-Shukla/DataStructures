@@ -1,4 +1,5 @@
-package sortingtechniques;/*   Created by IntelliJ IDEA.
+package sortingtechniques;
+/*   Created by IntelliJ IDEA.
  *   Author: Mudit Shukla
  *   Date: 25-05-2021
  *   Time: 01:24

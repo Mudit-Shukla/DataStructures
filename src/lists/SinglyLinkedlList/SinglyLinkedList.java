@@ -8,9 +8,9 @@
 package lists.SinglyLinkedlList;
 
 public class SinglyLinkedList {
-    Node head;
+    public Node head;
 
-    void insertAtTop(int data){
+    public void insertAtTop(int data){
         if(head == null){
             head = new Node(data);
         }else{
@@ -20,14 +20,14 @@ public class SinglyLinkedList {
         }
     }
 
-    void insertAtLast(int data){
+    public void insertAtLast(int data){
         Node temp = head;
         while(temp.next != null)
             temp = temp.next;
         temp.next = new Node(data);
     }
 
-    void insertAtPosition(int data, int position){
+    public void insertAtPosition(int data, int position){
         if(position > getLength()){
             System.out.println("Sorry the length of list is " + getLength() + " could not insert the data");
             return;
@@ -47,18 +47,18 @@ public class SinglyLinkedList {
         }
     }
 
-    void deleteAtTop(){
+    public void deleteAtTop(){
         head = head.next;
     }
 
-    void deleteAtLat(){
+    public void deleteAtLat(){
         Node temp = head;
         while(temp.next.next != null)
             temp = temp.next;
         temp.next = null;
     }
 
-    void deleteAtPosition(int position){
+    public void deleteAtPosition(int position){
         if(position == getLength()-1)
             deleteAtLat();
         else if(position == 1)
@@ -74,7 +74,7 @@ public class SinglyLinkedList {
         }
     }
 
-    int getLength(){
+    public int getLength(){
         int count = 0;
         Node temp = head;
         while(temp != null){
@@ -84,12 +84,16 @@ public class SinglyLinkedList {
         return count;
     }
 
-    void display(){
+    public void display(){
         Node temp = head;
         int index = 1;
         while(temp != null){
             System.out.println(index ++ + "    " +  temp.data);
             temp = temp.next;
         }
+    }
+
+    public Node getHead(){
+        return head;
     }
 }

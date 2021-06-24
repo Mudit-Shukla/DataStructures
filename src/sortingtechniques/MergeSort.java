@@ -23,7 +23,7 @@ class Main{
 
     public static void mergeSort(int left, int right){
         if(left < right){
-            int mid = left + (right-left)/2;
+            int mid = (left + right)/2;
             mergeSort(left, mid);
             mergeSort(mid+1, right);
             merge(array, left, mid, right);

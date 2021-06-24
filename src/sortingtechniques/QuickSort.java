@@ -12,7 +12,7 @@ public class QuickSort {
 
         quickSortFunction(0, array.length-1);
         for(int i : array)
-            System.out.println(i);
+            System.out.print(i + " ");
     }
 
     public static int partitioning(int left, int right){
@@ -20,9 +20,9 @@ public class QuickSort {
         int i = left;
         int j = right;
         while (i<j) {
-            while (pivot <= array[i])
+            while (pivot >= array[i])
                 i++;
-            while (pivot > array[j])
+            while (pivot < array[j])
                 j--;
             if(i < j)
                 swap(array, i, j);
