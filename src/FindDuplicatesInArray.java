@@ -5,12 +5,14 @@
  *   File: FindDuplicatesInArray.java
  */
 
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class FindDuplicatesInArray {
 
     int[] array;
+    HashMap<Integer, Integer> map = new HashMap<>();
 
     public FindDuplicatesInArray(int size){
         array = new int[size];
@@ -24,11 +26,32 @@ public class FindDuplicatesInArray {
     }
 
     public void searchDuplicateElements() {
-        Arrays.sort(array);
-        for(int i = 0; i< array.length-1; i++){
-            if(array[i] == array[i+1])
 
+        for(int i =0; i< array.length; i++){
+            if(map.containsKey(array[i])){
+                int count = map.get(array[i]);
+                count += 1;
+                map.put(array[i], count);
+            }else
+                map.put(array[i], 1);
         }
+    }
 
+    public void printDuplicates(){
+        for(Map.Entry<Integer, Integer> value : map.entrySet()){
+            if(value.getValue() > 1)
+                System.out.println(value.getKey());
+        }
+    }
+}
+
+class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int sizeOfArray = sc.nextInt();
+        FindDuplicatesInArray obj = new FindDuplicatesInArray(sizeOfArray);
+        obj.insertElementsInArray();
+        obj.searchDuplicateElements();
+        obj.printDuplicates();
     }
 }
