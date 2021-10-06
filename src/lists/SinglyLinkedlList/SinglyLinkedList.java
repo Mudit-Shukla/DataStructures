@@ -48,7 +48,10 @@ public class SinglyLinkedList {
     }
 
     public void deleteAtTop(){
-        head = head.next;
+        if(head == null)
+            System.out.println("Could not be deleted");
+        else
+            head = head.next;
     }
 
     public void deleteAtLat(){

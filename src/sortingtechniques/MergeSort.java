@@ -9,15 +9,18 @@ package sortingtechniques;
 
 class Main{
 
-    static int[] array = {5,8,6,1,4,9,3};
-    static int[] tempArray = new int[array.length];
     public static void main(String[] args) {
+        int[] a = {5,4,9,3,2,10};
+        mergeSort(a, 0, a.length-1);
+    }
 
-        mergeSort(array,0,array.length-1);
-        for(int i =0; i< tempArray.length; i++)
-            array[i] = tempArray[i];
-        for(int i : array)
-            System.out.println(i);
+    public static void mergeSort(int[] array, int start, int end){
+        mergeSort(array, start, (start+end)/2);
+        mergeSort(array, (start+end)/2, end);
+        merge(array)
+    }
+
+    public static void merge(int[] array){
 
     }
 
