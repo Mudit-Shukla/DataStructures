@@ -33,6 +33,8 @@ public class SinglyLinkedList {
             return;
         }else if(position == getLength())
             insertAtLast(data);
+        else if(position == 0)
+            insertAtTop(data);
         else{
             Node temp = head;
             int count = 0;
@@ -55,6 +57,8 @@ public class SinglyLinkedList {
     }
 
     public void deleteAtLat(){
+        if(head.next == null || head == null)
+            return;
         Node temp = head;
         while(temp.next.next != null)
             temp = temp.next;
