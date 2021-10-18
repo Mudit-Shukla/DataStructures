@@ -28,20 +28,20 @@ public class Main {
         list.display();
         System.out.println(list.getLength());
         System.out.println("===============");
-        list.deleteAtLat();
-        System.out.println("===============");
-        list.display();
-        System.out.println("===============");
-        list.deleteAtTop();
-        System.out.println("===============");
-        list.display();
-        System.out.println("===============");
-        list.deleteAtPosition(sc.nextInt());
-        System.out.println("===============");
-        list.display();
-        System.out.println("===============");
-        list.deleteAtPosition(sc.nextInt());
-        list.display();
-
+//        list.deleteAtLat();
+//        System.out.println("===============");
+//        list.display();
+//        System.out.println("===============");
+//        list.deleteAtTop();
+//        System.out.println("===============");
+//        list.display();
+//        System.out.println("===============");
+//        list.deleteAtPosition(sc.nextInt());
+//        System.out.println("===============");
+//        list.display();
+//        System.out.println("===============");
+//        list.deleteAtPosition(sc.nextInt());
+//        list.display();
+        System.out.println(list.getMiddle().data);
     }
 }

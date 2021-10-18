@@ -105,4 +105,33 @@ public class SinglyLinkedList {
     public Node getHead(){
         return head;
     }
+
+    public Node getMiddle(){
+        Node temp = head;
+        Node fastPointer = head;{
+            while(fastPointer != null  && fastPointer.next != null){
+                fastPointer = fastPointer.next.next;
+                temp = temp.next;
+            }
+            return temp;
+        }
+    }
+
+    public Node getNthElementFromEnd(int n){
+        if(head == null )
+            return null;
+        Node mainPtr = head;
+        Node refPtr = head;
+        int count = 0;
+        while(count < n){
+            refPtr = refPtr.next;
+            count++;
+        }
+        while (refPtr != null){
+            refPtr = refPtr.next;
+            mainPtr = mainPtr.next;
+        }
+
+        return mainPtr;
+    }
 }
