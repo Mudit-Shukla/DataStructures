@@ -134,4 +134,21 @@ public class SinglyLinkedList {
 
         return mainPtr;
     }
+
+    public Node removeDuplicates(){
+
+        Node temp = head;
+        if(temp == null) return head;
+        if(temp.next == null)
+            return temp;
+        while(temp.next != null){
+            if(temp.data == temp.next.data){
+                temp.next = temp.next.next;
+                continue;
+            }temp = temp.next;
+
+        }
+
+        return head;
+    }
 }
