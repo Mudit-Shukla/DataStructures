@@ -1,9 +1,11 @@
-package sortingtechniques;/*   Created by IntelliJ IDEA.
+/*   Created by IntelliJ IDEA.
  *   Author: Mudit Shukla
  *   Date: 01-06-2021
  *   Time: 10:24
  *   File: sortingtechniques.QuickSort.java
  */
+
+package sortingtechniques;
 
 public class QuickSort {
 

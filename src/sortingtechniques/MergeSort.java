@@ -7,52 +7,84 @@
 
 package sortingtechniques;
 
-class Main{
+class MergeSort
+{
 
-    static int[] newArray = new int[6];
+    public static void main(String args[])
+    {
+        int arr[] = {12, 11, 13, 5, 6, 7};
 
-    public static void main(String[] args) {
-        int []array = {5,8,1,2,9,6};
-        mergeSort(array, 0, array.length-1);
-        for (int i: newArray) {
-            System.out.print(i + " ");
-        }
+        System.out.println("Given Array");
+        printArray(arr);
+
+        MergeSort ob = new MergeSort();
+        ob.mergeSort(arr, 0, arr.length-1);
+
+        System.out.println("\nSorted array");
+        printArray(arr);
     }
 
-    public static void merge(int[] array, int lb, int mid, int ub){
+    void merge(int arr[], int l, int m, int r)
+    {
+        int n1 = m - l + 1;
+        int n2 = r - m;
 
-        int i = lb;
-        int j = mid+1;
-        int k = lb;
-        while(i <= mid && j <= ub){
-            if(array[j] < array[i]){
-                newArray[k] = array[j];
-                j++;
-            }
-            else if(array[j] >= array[i]){
-                newArray[k] = array[i];
+        int L[] = new int [n1];
+        int R[] = new int [n2];
+
+        for (int i=0; i<n1; ++i)
+            L[i] = arr[l + i];
+        for (int j=0; j<n2; ++j)
+            R[j] = arr[m + 1+ j];
+
+        int i = 0, j = 0;
+
+        int k = l;
+        while (i < n1 && j < n2)
+        {
+            if (L[i] <= R[j])
+            {
+                arr[k] = L[i];
                 i++;
+            }
+            else
+            {
+                arr[k] = R[j];
+                j++;
             }
             k++;
         }
-        while (i <= mid) {
-                newArray[k] = array[i];
-                i++;
-                k++;
-            }
-        while (j <= ub) {
-                newArray[k] = array[j];
-                j++;
-                k++;
-            }
-    }
-
-    public static void mergeSort(int[] array, int lb, int ub){
-        if(lb < ub) {
-            int mid = lb + (ub-lb)/ 2;
-            mergeSort(array, lb, mid);
-            mergeSort(array, mid+1, ub);
-            merge(array, lb, mid, ub);
+        while (i < n1)
+        {
+            arr[k] = L[i];
+            i++;
+            k++;
+        }
+        while (j < n2)
+        {
+            arr[k] = R[j];
+            j++;
+            k++;
         }
     }
+
+    void mergeSort(int arr[], int l, int r)
+    {
+        if (l < r)
+        {
+            int m = (l+r)/2;
+            mergeSort(arr, l, m);
+            mergeSort(arr , m+1, r);
+            merge(arr, l, m, r);
+        }
+    }
+
+    static void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i=0; i<n; ++i)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
+
 }
