@@ -34,6 +34,10 @@ public class SelectionSort {
         {
             SelectionSort obj = new SelectionSort();
             int[] array = {10,100,20,60,40,30};
+            System.out.print("Unsorted array : ");
+            for(int element : array)
+                System.out.print(element + " ");
+            System.out.println();
 
             obj.selectionSort(array);
             System.out.print("Sorted array: ");
