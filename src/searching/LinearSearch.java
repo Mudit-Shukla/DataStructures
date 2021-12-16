@@ -10,7 +10,7 @@ package searching;
 public class LinearSearch {
     public static void main(String[] args) {
         int[] array = {10, 20, 60, 50, 30, 100};
-        int targetValue = 1000;
+        int targetValue = 30;
         boolean flag = false;
         for(int i = 0; i< array.length; i++){
             if(array[i] == targetValue){
